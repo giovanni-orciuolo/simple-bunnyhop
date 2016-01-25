@@ -34,6 +34,9 @@ void BHop()
 {
 	while (true)
 	{
+		
+		if (!bhop_toggle) continue;
+		
 		DWORD LocalPlayer_Base = Mem->Read<DWORD>(Mem->ClientDLL_Base + C_m_dwLocalPlayer);
 		BYTE LocalPlayer_Flags = Mem->Read<BYTE>(LocalPlayer_Base + 0x100);
 
